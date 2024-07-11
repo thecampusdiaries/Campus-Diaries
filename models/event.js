@@ -13,7 +13,11 @@ const EventSchema = new Schema({
     posts: [{ 
         type: Schema.Types.ObjectId, 
         ref: 'Post' 
-    }]
+    }],
+    regLink: {
+        type: String,
+        required: true
+    }
 });
 
 const Event = mongoose.model('Event', EventSchema);
