@@ -6,12 +6,13 @@ module.exports.index = async (req, res) => {
 }
 
 module.exports.addEvent = async (req, res) => {
-    const { name, description, date } = req.body;
+    const { name, description, date, gform } = req.body;
     const event = new Event({
         name,
         description,
         date,
-        organizer: req.user._id
+        organizer: req.user._id,
+        regLink: gform
     });
     await event.save();
     res.redirect(`/events/${event._id}`); // Redirect to event listing page
