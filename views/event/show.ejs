@@ -97,7 +97,9 @@
                         Date: <%= new Date(event.date).toDateString() %>
                     </small>
                 </p>
-                <a href="#" class="btn-view-event">View Event</a>
+                <% if (new Date(event.date) >= new Date()) { %>
+                    <a href="<%=event.regLink%>" class="btn-view-event">Register</a>
+                <%}%>
             </div>
             <h6 class="mt-3">Posts:</h6>
             <div class="row">
