@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: 'tcd_images',
+        folder: 'kkw_tcd_images',
         allowedFormats: ['png', 'jpg', 'jpeg'],
     },
 })
@@ -19,7 +19,7 @@ const storage = new CloudinaryStorage({
 const storage_profile = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: 'profile_pictures',
+        folder: 'kkw_profile_pictures',
         allowedFormats: ['png', 'jpg', 'jpeg']
     }
 })
